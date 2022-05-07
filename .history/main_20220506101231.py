@@ -67,7 +67,8 @@ def main(data):
 
 @app.route('/', methods=['PUT'])
 def create_record():
-    data = {}
+    global data
+    data.clear()
     print(data)
     data = json.loads(request.data)
     print(data)

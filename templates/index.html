@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="refresh" content="5">
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_84ade91ceeb34078944fb348946b2348 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_84ade91ceeb34078944fb348946b2348" ></div>
+        
+</body>
+<script>    
+    
+            var map_84ade91ceeb34078944fb348946b2348 = L.map(
+                "map_84ade91ceeb34078944fb348946b2348",
+                {
+                    center: [25.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 3,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b8f47b6c4d384a5da790f5f28f6fd1b6 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_84ade91ceeb34078944fb348946b2348);
+        
+    
+            var tile_layer_dd1bc9b56fae4896bae1213c39bb32fe = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_84ade91ceeb34078944fb348946b2348);
+        
+    
+            var circle_cc365882404044a0ae05ecb18db4f4c5 = L.circle(
+                [20.6720375, -103.338396],
+                {"bubblingMouseEvents": true, "color": "#351b1b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#351b1b", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200000, "stroke": true, "weight": 2}
+            ).addTo(map_84ade91ceeb34078944fb348946b2348);
+        
+    
+        var popup_c80b01cfc6284560a3c449b1b6dac751 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a372fca20e5c459997f8b78b80e28c6e = $(`<div id="html_a372fca20e5c459997f8b78b80e28c6e" style="width: 100.0%; height: 100.0%;">taylor : Guadalajara : 60</div>`)[0];
+            popup_c80b01cfc6284560a3c449b1b6dac751.setContent(html_a372fca20e5c459997f8b78b80e28c6e);
+        
+
+        circle_cc365882404044a0ae05ecb18db4f4c5.bindPopup(popup_c80b01cfc6284560a3c449b1b6dac751)
+        ;
+
+        
+    
+    
+            var circle_9b4ae0de2efd43bea67eb6f7e006bf2f = L.circle(
+                [33.4484367, -112.074141],
+                {"bubblingMouseEvents": true, "color": "#351b1b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#351b1b", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200000, "stroke": true, "weight": 2}
+            ).addTo(map_84ade91ceeb34078944fb348946b2348);
+        
+    
+        var popup_0dd00a19c7af4b1a866bd7e2aa078dd4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_69f86b10b36d48659b4a114551b5e5c6 = $(`<div id="html_69f86b10b36d48659b4a114551b5e5c6" style="width: 100.0%; height: 100.0%;">taylor : Phoenix : 60</div>`)[0];
+            popup_0dd00a19c7af4b1a866bd7e2aa078dd4.setContent(html_69f86b10b36d48659b4a114551b5e5c6);
+        
+
+        circle_9b4ae0de2efd43bea67eb6f7e006bf2f.bindPopup(popup_0dd00a19c7af4b1a866bd7e2aa078dd4)
+        ;
+
+        
+    
+    
+            var tile_layer_e705885fdc6d451599039555d0606199 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_84ade91ceeb34078944fb348946b2348);
+        
+    
+            var circle_0399639192f643a6a166c3a594c39e8b = L.circle(
+                [38.4224548, 27.1310699],
+                {"bubblingMouseEvents": true, "color": "#781f1f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#781f1f", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200000, "stroke": true, "weight": 2}
+            ).addTo(map_84ade91ceeb34078944fb348946b2348);
+        
+    
+        var popup_514bd76e2b2444fa83597f62f86573a3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d9016d704f304176ab5789e383cd88b8 = $(`<div id="html_d9016d704f304176ab5789e383cd88b8" style="width: 100.0%; height: 100.0%;">wow : Izmir : 130</div>`)[0];
+            popup_514bd76e2b2444fa83597f62f86573a3.setContent(html_d9016d704f304176ab5789e383cd88b8);
+        
+
+        circle_0399639192f643a6a166c3a594c39e8b.bindPopup(popup_514bd76e2b2444fa83597f62f86573a3)
+        ;
+
+        
+    
+    
+            var tile_layer_fdccc3686c144ad98ebdc462f45f096b = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_84ade91ceeb34078944fb348946b2348);
+        
+</script>

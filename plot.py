@@ -9,21 +9,13 @@ from colormap import rgb2hex
 import math
 import sys
 
-mape = folium.Map(location = [25, 0], zoom_start=3)
-folium.TileLayer('cartodbdark_matter').add_to(mape)
 
-def debugnamegen():
-    f = open('/tmp/wordlist.txt', 'r')
-    p = f.read().split("\n")
-    return random.choice(p)
-
-
-def gen(ping, player, colorin):
+def gen(ping, player, colorin, mape):
 #BEANS
     calc = PosCitysGen(ping)
     places = list(calc.keys())
 
-    file = open("cords.json","r")
+    file = open("./data/cords.json","r")
     lat_data = json.load(file)
 
     out = {}
@@ -36,13 +28,9 @@ def gen(ping, player, colorin):
                     print(key + " : " + city)
                     #print(cord)
 
-                    folium.Circle(location=[float(cord[0]), float(cord[1])], popup=f"{player} : {key}", fill_color=colorin, radius=200000, weight=2,  color=colorin).add_to(mape)
+                    folium.Circle(location=[float(cord[0]), float(cord[1])], popup=f"{player} : {key} : {ping}", fill_color=colorin, radius=200000, weight=2,  color=colorin).add_to(mape)
                     i = i + 1
 
 
-a = colorgen(10)
 
-for item in a:
-    gen(random.randint(1, 100), debugnamegen(), item)
 
-mape.save('index.html') 

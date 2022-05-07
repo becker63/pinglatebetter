@@ -35,7 +35,8 @@ mape = folium.Map(location = [25, 0], zoom_start=3)
 oldplayer = ""
 
 
-def main(data):
+def main():
+    global data
     global playercolorum
     global mape
 
@@ -67,12 +68,13 @@ def main(data):
 
 @app.route('/', methods=['PUT'])
 def create_record():
-    data = {}
+    global data
+    data.clear()
     print(data)
     data = json.loads(request.data)
     print(data)
 
-    main(data)
+    main()
 
     return ("ok!")
 

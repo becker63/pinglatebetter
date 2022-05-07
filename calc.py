@@ -1,6 +1,6 @@
 import json
 
-strength = 3
+strength = 1
 
 def math(ping, test):
     p1 = ping - strength
@@ -14,7 +14,7 @@ def math(ping, test):
 
 
 def PosCitysGen(playerping):
-    file = open("lat_data.json","r")
+    file = open("./data/lat_data.json","r")
     lat_data = json.load(file)
 
     out = {}

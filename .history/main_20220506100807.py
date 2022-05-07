@@ -34,17 +34,14 @@ mape = folium.Map(location = [25, 0], zoom_start=3)
 
 oldplayer = ""
 
+data = {}
 
-def main(data):
+def main():
+    global data
     global playercolorum
     global mape
-
-    with open("./templates/index.html", "w") as f:
-        f.write("")
-
     folium.TileLayer('cartodbdark_matter').add_to(mape)
 
-    print(data)
     
     for i in data:
     
@@ -67,12 +64,13 @@ def main(data):
 
 @app.route('/', methods=['PUT'])
 def create_record():
-    data = {}
-    print(data)
+    global data
+    data.clear
     data = json.loads(request.data)
-    print(data)
+    with open("./templates/index.html", "w") as f:
+        f.write("")
 
-    main(data)
+    main()
 
     return ("ok!")
 

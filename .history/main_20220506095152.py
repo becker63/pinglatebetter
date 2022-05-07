@@ -1,4 +1,3 @@
-import os
 import json
 from plot import gen
 from color import colorgen
@@ -34,46 +33,37 @@ mape = folium.Map(location = [25, 0], zoom_start=3)
 
 oldplayer = ""
 
+data = {}
 
-def main(data):
+def main():
+    global data
     global playercolorum
     global mape
-
-    with open("./templates/index.html", "w") as f:
-        f.write("")
-
     folium.TileLayer('cartodbdark_matter').add_to(mape)
 
-    print(data)
     
     for i in data:
-    
-        ping = int(data[i])
-        player = i
+        print(i, int(data[i]))
 
-        if ping < len(playercolors):
-            gen(ping, player, playercolors[ping], mape)
-        else:
-            gen(ping, player, playercolors[len(playercolors) - 1], mape)
-        playercolorum = playercolorum + 1
-    
+#    if ping < len(playercolors):
+#        gen(ping, player, playercolors[ping], mape)
+#    else:
+#        gen(ping, player, playercolors[len(playercolors) - 1], mape)
+#    playercolorum = playercolorum + 1
+#
+#    autohtmlrealoadinsert()
 
-
-    mape.save('./templates/index.html') 
-
-    autohtmlrealoadinsert()
 
 
 
 @app.route('/', methods=['PUT'])
 def create_record():
-    data = {}
-    print(data)
+    global data
     data = json.loads(request.data)
-    print(data)
+    for player in data:
+        main()
 
-    main(data)
-
+    mape.save('./templates/index.html') 
     return ("ok!")
 
 @app.route("/")
